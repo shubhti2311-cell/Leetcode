@@ -1,18 +1,14 @@
 #include <iostream>
 using namespace std;
-void func(char* c){
-    if (*c!='\0 ')
-    {
-       func(c+1);
-       func(c+1);
-       cout<<*c<<" ";
-       
-    }
-    
+void func(int n){
+if(n==0){
+    return;
+}
+func(n-1);
+cout<<n<<endl;
+func(n-1);
 };
 int main() {
-    char a[]="abc";
-    char* b=a;
-    func(b);
+    func(3);
     return 0;
 }
